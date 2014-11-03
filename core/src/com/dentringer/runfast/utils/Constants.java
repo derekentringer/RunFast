@@ -7,7 +7,10 @@ public class Constants
 	//game
 	public static final int APP_WIDTH = 800;
 	public static final int APP_HEIGHT = 480;
+	
+	//level 1
 	public static final String BACKGROUND_IMAGE_PATH = "background_1.png";
+	public static final String GROUND_IMAGE_PATH = "ground_1.png";
 	
 	//world
 	//gravity of -10m/s^2

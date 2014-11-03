@@ -13,16 +13,20 @@ import com.badlogic.gdx.physics.box2d.Manifold;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.Array;
+import com.badlogic.gdx.utils.Scaling;
+import com.badlogic.gdx.utils.viewport.ScalingViewport;
+import com.dentringer.runfast.actors.Background;
 import com.dentringer.runfast.actors.Enemy;
 import com.dentringer.runfast.actors.Ground;
 import com.dentringer.runfast.actors.Runner;
 import com.dentringer.runfast.utils.BodyUtils;
+import com.dentringer.runfast.utils.Constants;
 import com.dentringer.runfast.utils.WorldUtils;
 
 public class GameStage extends Stage implements ContactListener
 {
-	private static final int VIEWPORT_WIDTH = 20;
-	private static final int VIEWPORT_HEIGHT = 13;
+	private static final int VIEWPORT_WIDTH = Constants.APP_WIDTH;
+	private static final int VIEWPORT_HEIGHT = Constants.APP_HEIGHT;
 	
 	private World world;
 	private Ground ground;
@@ -42,6 +46,8 @@ public class GameStage extends Stage implements ContactListener
 	
 	public GameStage()
 	{
+		super(new ScalingViewport(Scaling.stretch, VIEWPORT_WIDTH, VIEWPORT_HEIGHT,
+                new OrthographicCamera(VIEWPORT_WIDTH, VIEWPORT_HEIGHT)));
 		setupWorld();
 		setupCamera();
 		setupTouchControlAreas();
@@ -56,9 +62,15 @@ public class GameStage extends Stage implements ContactListener
 		//collisions
 		world.setContactListener(this);
 		
+		setupBackground();
 		setupGround();
 		setupRunner();
 		createEnemy();
+	}
+	
+	private void setupBackground()
+	{
+		addActor(new Background());
 	}
 	
 	private void setupGround()
