@@ -40,6 +40,13 @@ public class Constants
 	//get hit
 	public static final float RUNNER_HIT_ANGULAR_IMPULSE = 10f;
 	
+	//characters
+	public static final String CHARACTERS_ATLAS_PATH = "characters.txt";
+    public static final String[] RUNNER_RUNNING_REGION_NAMES = new String[] {"alienGreen_run1", "alienGreen_run2"};
+    public static final String RUNNER_DODGING_REGION_NAME = "alienGreen_dodge";
+    public static final String RUNNER_HIT_REGION_NAME = "alienGreen_hit";
+    public static final String RUNNER_JUMPING_REGION_NAME = "alienGreen_jump";
+    
 	//enemies
 	public static final float ENEMY_X = 25f;
     public static final float ENEMY_DENSITY = RUNNER_DENSITY;
@@ -47,4 +54,11 @@ public class Constants
     public static final float RUNNING_LONG_ENEMY_Y = 2f;
     public static final float FLYING_ENEMY_Y = 3f;
     public static final Vector2 ENEMY_LINEAR_VELOCITY = new Vector2(-10f, 0);
+    
+    public static final String[] RUNNING_SMALL_ENEMY_REGION_NAMES = new String[] {"ladyBug_walk1", "ladyBug_walk2"};
+    public static final String[] RUNNING_LONG_ENEMY_REGION_NAMES = new String[] {"barnacle_bite1", "barnacle_bite2"};
+    public static final String[] RUNNING_BIG_ENEMY_REGION_NAMES = new String[] {"spider_walk1", "spider_walk2"};
+    public static final String[] RUNNING_WIDE_ENEMY_REGION_NAMES = new String[] {"worm_walk1", "worm_walk2"};
+    public static final String[] FLYING_SMALL_ENEMY_REGION_NAMES = new String[] {"bee_fly1", "bee_fly2"};
+    public static final String[] FLYING_WIDE_ENEMY_REGION_NAMES = new String[] {"fly_fly1", "fly_fly2"};
 }
