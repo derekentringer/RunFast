@@ -4,9 +4,9 @@ import com.dentringer.runfast.enums.UserDataType;
 
 public class GroundUserData extends UserData
 {
-	public GroundUserData()
+	public GroundUserData(float width, float height)
 	{
-		super();
+		super(width, height);
 		userDataType = UserDataType.GROUND;
 	}
 }

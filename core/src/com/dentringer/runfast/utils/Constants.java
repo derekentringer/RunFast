@@ -7,10 +7,11 @@ public class Constants
 	//game
 	public static final int APP_WIDTH = 800;
 	public static final int APP_HEIGHT = 480;
+	public static final float WORLD_TO_SCREEN = 32;
 	
 	//level 1
-	public static final String BACKGROUND_IMAGE_PATH = "background_1.png";
-	public static final String GROUND_IMAGE_PATH = "ground_1.png";
+	public static final String BACKGROUND_IMAGE_PATH = "background.png";
+	public static final String GROUND_IMAGE_PATH = "ground.png";
 	
 	//world
 	//gravity of -10m/s^2
@@ -20,7 +21,7 @@ public class Constants
 	//in meters, eg 25m in width
 	public static final float GROUND_X = 0;
 	public static final float GROUND_Y = 0;
-	public static final float GROUND_WIDTH = 50f;
+	public static final float GROUND_WIDTH = 25f;
 	public static final float GROUND_HEIGHT = 2f;
 	public static final float GROUND_DENSITY = 0f;
 	

@@ -76,11 +76,13 @@ public class GameStage extends Stage implements ContactListener
 	private void setupGround()
 	{
 		ground = new Ground(WorldUtils.createGround(world));
+		addActor(ground);
 	}
 	
 	private void setupRunner()
 	{
 		runner = new Runner(WorldUtils.createRunner(world));
+		addActor(runner);
 	}
 	
 	private void createEnemy()
